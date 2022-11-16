@@ -1,0 +1,28 @@
+Ejercicio 1: Creeamos una clase nodo que esta formada por un estad
+             un nodo padre y una acción.
+             Modificamos Estrategia 4 para que se adaptase a esta nueva implementación,
+             y le añadimos el metodo reconstruye_solucion, al cual enviandole la solución del metodo soluciona
+             reconstruye el camino que recorre desde la solución hasta el nodo padre.
+             También Creamos una clase Busqueda Grafo la cual soluciona el problema que ocurre en Estrategia4 cuando le llega un estado sin sucesores.
+
+Ejercicio 2a: Creeamos una clase ProblemaCuadradoMagico la cual se va a encargar de definir
+              los metodos de un cuadrado magico como la meta, la matriz NxN... y también creeamos dos nuevos metodos de busqueda:
+              Profundidad y Anchura.
+              Profundidad escoge un camino y lo sigue y si no lo encuentra en ese camino pasa al siguiente,
+              en cambio Anchura recorre todos los camimos a la vez.
+              Para la implementación del problema decidimos hacer que solo se le pasen los números a insertar,
+              que son calculados a raíz de los que faltan en la matriz para llegar al N^2.
+              Así pues, Estado se constituye de una matriz que representa el estado actual, y
+              Acción es cada uno de los números que faltan por insertar.
+              Para aplicarlas primero se comprueba si el número no está introducido, y de no estarlo se procede a meterlo donde se encuentre el
+              primer cero que aparezca al recorrer la matriz.
+              EsMeta simplemente hace las sumas de las filas y diagonales para comprobar si se cumple que sean iguales, o no.
+
+
+             ¿Cuál de las dos estrategias es la más adecuada? ¿Cuál es la causa?
+             La estrategia más adecuada para el cuadrado mágico es la busqueda por profundidad
+             ya que, ejecutando ambos algoritmos de busqueda,
+             el de profundidad crea 27 nodos y expande 9 mientras que el de anchura crearía 42 nodos y expande 14.
+             Como podemos ver por los datos anteriormente citados ,la busqueda por profundidad es la mas cercana a ser optima.
+             La causa es porque profundidad escoge un camino y lo sigue , amplitud prueba todas las posibilidades en cada estado,
+             asi que cuantos mas huecos en blanco haya, mas posibilidades habrá y por tanto amplitud tardara más.
